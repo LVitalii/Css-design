@@ -1,0 +1,129 @@
+//Sass Patterns for selectors
+%marginsCenter{
+    margin: {
+        top: auto;
+        bottom: auto;
+        right: auto;
+        left: auto;
+    }
+}
+
+//Sass variables
+$fontForYear: 26px;
+$fontForDay: 20px;
+$fontForHovered: 26px;
+$fontForHovered: 22px;
+
+//Sass variables for @if
+$typeHovered: light;
+//$typeHovered: brigth;
+//$typeHovered: dark;
+
+//Sass mixin
+@mixin large-text ($size) {
+//Sass embedded properties 
+  font: {
+    family: Arial;
+    size: $size;
+    weight: bold;
+  }
+  color: brown;
+}
+
+.header{
+    height:200px;
+}
+.header__image{
+    width: auto;
+    height: 200px;
+    @extend %marginsCenter;
+}
+
+.main{
+    @extend %marginsCenter;
+}
+
+.main__selection{
+    width: 287px;    
+    @extend %marginsCenter;
+}
+
+.main__selection__month, .main__selection__year{
+    @include large-text($fontForDay)
+}
+
+.main__table{
+    @extend %marginsCenter;
+    margin-top: 20px;
+    width: 400px;
+    font: {
+        family: Verdana;
+        size: $fontForDay;        
+    }
+    color: brown;   
+}
+
+.main__table__calendar{
+    td:hover{
+        font: {
+            size: $fontForHovered;
+            weight: bold;        
+        }  
+
+//Sass @if directive
+        @if $typeHovered == light {      
+            background: yellow;
+        } @else if $typeHovered == brigth {      
+            background: orangered;
+        } @else if $typeHovered == dark {
+//Sass operation with colors            
+            background: #010203 + #040506;
+        }
+
+        width: 100px;
+        height: 50px;
+        box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);           
+        opacity: 1;
+    }    
+    text-align: center;
+    border: 1px solid black;
+    @extend %marginsCenter;
+}
+
+.main__table__calendar__body{
+    td {
+        width: 100px;
+        height: 50px;
+    }
+}
+
+.main__table__calendar__body_week{
+    font: {
+        family: Georgia;
+        size: $fontForDay;
+        weight: bold;
+    }
+    color: black;
+    td:hover{        
+        box-shadow: 0 0 0px 0px white;           
+        background: white;
+    }
+}
+
+.main__table__calendar__body_otherDay{
+    opacity: 0.5;    
+}
+
+.main__table__calendar__body_currentDay{
+    background: plum;
+    box-shadow: 0 0 2px 1px #9CDCFE;
+}
+
+.footer {
+    @extend %marginsCenter;
+    margin-top: 100px; 
+    margin-bottom: 20px;   
+    border: 1px solid #ccc!important;
+    border-radius: 16px;
+    text-align: center;
+}

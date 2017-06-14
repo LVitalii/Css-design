@@ -1,0 +1,69 @@
+.header__image, .main, .main__selection, .main__table, .main__table__calendar, .footer {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: auto;
+  margin-left: auto; }
+
+.header {
+  height: 200px; }
+
+.header__image {
+  width: auto;
+  height: 200px; }
+
+.main__selection {
+  width: 287px; }
+
+.main__selection__month, .main__selection__year {
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: bold;
+  color: brown; }
+
+.main__table {
+  margin-top: 20px;
+  width: 400px;
+  font-family: Verdana;
+  font-size: 20px;
+  color: brown; }
+
+.main__table__calendar {
+  text-align: center;
+  border: 1px solid black; }
+  .main__table__calendar td:hover {
+    font-size: 22px;
+    font-weight: bold;
+    background: yellow;
+    width: 100px;
+    height: 50px;
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    opacity: 1; }
+
+.main__table__calendar__body td {
+  width: 100px;
+  height: 50px; }
+
+.main__table__calendar__body_week {
+  font-family: Georgia;
+  font-size: 20px;
+  font-weight: bold;
+  color: black; }
+  .main__table__calendar__body_week td:hover {
+    box-shadow: 0 0 0px 0px white;
+    background: white; }
+
+.main__table__calendar__body_otherDay {
+  opacity: 0.5; }
+
+.main__table__calendar__body_currentDay {
+  background: plum;
+  box-shadow: 0 0 2px 1px #9CDCFE; }
+
+.footer {
+  margin-top: 100px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc !important;
+  border-radius: 16px;
+  text-align: center; }
+
+/*# sourceMappingURL=index.css.map */

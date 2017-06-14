@@ -2,91 +2,130 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="index.css">
     <title>June 2017 calendar</title>
 </head>
 <body>
-    <div class="header">
-        <img src="./header.png">
+    <div class="header container">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="simple2017.jpg" alt="2017" class="header__image">
+                </div>
+
+                <div class="item">
+                    <img src="сoсk2017.jpg" alt="Cock2017" class="header__image">
+                </div>
+    
+                <div class="item">
+                    <img src="euro2017.png" alt="Euro 2017" class="header__image">
+                </div>
+            </div>
+        </div>    
     </div>
 
-    <div class="main">
-        <div class="main__selection">
-            <input class="selection__button selection__buttom_yearDown" type="button" value="<">
-            <input classype="selection__button selection__buttom_monthDown" type="button" value="<">
-            <span class="selection__month">June </span>
-            <span class="selection__year">2017</span>
-            <input class="selection__button selection__buttom_yearDown" type="button" value=">">
-            <input class="selection__button selection__buttom_yearDown" type="button" value=">">
+    <div class="main container">
+        <div>
+            <div class="main__selection">
+                <div class="btn-group">
+                    <input class="btn btn-primary" type="button" value="<<" data-toggle="tooltip" title="Year Down">
+                    <input class="btn btn-primary" type="button" value="<" data-toggle="tooltip" title="Month Down">
+                </div>
+                    <span class="main__selection__month">June </span>
+                    <span class="main__selection__year">2017</span>
+                <div class="btn-group">
+                    <input class="btn btn-primary" type="button" value=">" data-toggle="tooltip" title="Month Up">
+                    <input class="btn btn-primary" type="button" value=">>" data-toggle="tooltip" title="Year Up">
+                </div>
+            </div>
+        </div>        
+
+        <div>
+            <div class="main__table">
+                <table class="main__table__calendar">
+                    <tbody class="main__table__calendar__body">
+                        <tr class="main__table__calendar__body_week">
+                            <td>Mo</td>
+                            <td>Tu</td>
+                            <td>We</td>
+                            <td>Th</td>
+                            <td>Fr</td>
+                            <td>Sa</td>
+                            <td>Su</td>
+                        </tr>
+                        <tr>
+                            <td class="main__table__calendar__body_otherDay">29</td>
+                            <td class="main__table__calendar__body_otherDay">30</td>
+                            <td class="main__table__calendar__body_otherDay">31</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>13</td>
+                            <td class="main__table__calendar__body_currentDay">14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>25</td>
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td class="main__table__calendar__body_otherDay">1</td>
+                            <td class="main__table__calendar__body_otherDay">2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-
-        <div class="main__grid">
-            <table class="calendar">
-                <tr class="">
-                    <td></td>
-                    <td>Mo</td>
-                    <td>Tu</td>
-                    <td>We</td>
-                    <td>Th</td>
-                    <td>Fr</td>
-                    <td>Sa</td>
-                    <td>Su</td>
-                </tr>
-                <tr class="">
-                    <td>22</td>
-                    <td>29</td>
-                    <td>30</td>
-                    <td>31</td>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                </tr>
-                <tr class="">
-                    <td>23</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                    <td>8</td>
-                    <td>9</td>
-                    <td>10</td>
-                    <td>11</td>
-                </tr>
-                <tr class="">
-                    <td>24</td>
-                    <td>12</td>
-                    <td>13</td>
-                    <td>14</td>
-                    <td>15</td>
-                    <td>16</td>
-                    <td>17</td>
-                    <td>18</td>
-                </tr>
-                <tr class="">
-                    <td>25</td>
-                    <td>19</td>
-                    <td>20</td>
-                    <td>21</td>
-                    <td>22</td>
-                    <td>23</td>
-                    <td>24</td>
-                    <td>25</td>
-                </tr>
-                <tr class="">
-                    <td>26</td>
-                    <td>26</td>
-                    <td>27</td>
-                    <td>28</td>
-                    <td>29</td>
-                    <td>30</td>
-                    <td>1</td>
-                    <td>2</td>
-                </tr>
-            </table>
-        </div>
     </div>
 
-    <div class="footer">
-        <p class="footee__disigned">Created by Vitalii Lypach</p>
+    <div class="footer container">@ Created by Vitalii Lypach
     </div>
+
+    <script>
+
+//Used for tooltip
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+</script>
+
 </body>
 </html>

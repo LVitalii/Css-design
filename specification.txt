@@ -1,0 +1,27 @@
+Approaches used in the project:
+
+Bootstrap:
+- buttons styles;
+- button groups;
+- Carousel for images;
+- tooltip for buttons
+
+Sass:
+- Embedded properties;
+- Patterns for selectors;
+- Variables;
+- Operaions with colors;
+- @if directive;
+- Mixin;
+
+For Visual Studio Code:
+There is tasks.json wich allows to run index.html file from Studio.
+Use Ctrl+Shift+B
+
+Installation:
+In order to install Sass:
+- install Ruby
+- run command: gem install sass
+- to check: sass -v
+In order to run Sass in watch mode:
+sass --watch input.scss:index.css
